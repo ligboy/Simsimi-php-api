@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @author ligboy
- *
+ * @author 
+ * @license 
  */
 class Simsimi  {
 
-  private $cookie = "2D96E7F39FBAB9B28314607D0328D36F";
+	private $cookie = "2D96E7F39FBAB9B28314607D0328D36F";
 
 
 	/**
@@ -16,6 +16,10 @@ class Simsimi  {
 		if ($cookieSeed)$this->cookie = md5($cookieSeed);
 	}
 
+	/**
+	 * @param string $key
+	 * @return string
+	 */
 	public function get($key){
 		$header = array();
 		$header[]= 'Accept: image/gif, image/x-xbitmap, text/html, * '. '/* ';
@@ -46,7 +50,7 @@ class Simsimi  {
 			}
 			return $Message['response'];
 		}else{
-			return '你说的什么？';
+			return '你说的什么啊？';
 		}
 	}
 }
